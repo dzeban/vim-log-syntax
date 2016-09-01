@@ -3,6 +3,7 @@
 " Maintainer:       Alex Dzyoba <avd@reduct.ru>
 " Latest Revision:  2013-03-08
 " Changes:          2013-03-08 Initial version
+"                   2016-09-01 Changes by jquintus
 
 " Based on messages.vim - syntax file for highlighting kernel messages
 
@@ -11,7 +12,7 @@ if exists("b:current_syntax")
 endif
 
 syn match log_error 	'\c.*\<\(FATAL\|ERROR\|ERRORS\|FAIL\|FAILED\|FAILURE\).*'
-syn match log_warning 	'\c.*\<\(WARNING\|DELETE\|DELETING\|DELETED\|RETRY\|RETRYING\).*'
+syn match log_warning 	'\c.*\<\(WARN\|WARNING\|DELETE\|DELETING\|DELETED\|RETRY\|RETRYING\).*'
 syn region log_string 	start=/'/ end=/'/ end=/$/ skip=/\\./
 syn region log_string 	start=/"/ end=/"/ skip=/\\./
 syn match log_number 	'0x[0-9a-fA-F]*\|\[<[0-9a-f]\+>\]\|\<\d[0-9a-fA-F]*'
